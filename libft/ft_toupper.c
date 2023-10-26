@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 13:09:18 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:51 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/26 13:10:16 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/26 15:25:59 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+int ft_toupper(int c)
 {
-    char *ptr = b;
-    size_t i;
-
-    i = 0;
-    while(i < len)
+    if(c <= 'z' && c >= 'a')
     {
-        ptr[i] = c;
-        i++;
+        c -= 32;
     }
-    return ptr;
+    return c;
 }
 
-int main(void)
-{
-    char str[50];
-
-    ft_memset(str, 'x', 5);
-    printf("%s", str);
-    return 0;
-}
+// int main(void)
+// {
+//     printf("%c", ft_toupper('a'));
+// }

@@ -1,36 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 13:09:18 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:51 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/26 13:08:54 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/26 15:25:49 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+int atoi(const char *str)
 {
-    char *ptr = b;
-    size_t i;
+    int i;
+    int sum;
+    int neg;
 
+    neg = 1;
+    sum = 0;
     i = 0;
-    while(i < len)
+    while(str[i] == ' ')
     {
-        ptr[i] = c;
         i++;
     }
-    return ptr;
+    if (str[i] == '-' || str[i] == '+')
+    {
+        if (str[i] == '-')
+            neg *= -1;
+        i++;
+    }
+    while(str[i] <= '9' && str[i] >= '0')
+    {
+        sum *= 10;
+        sum += str[i] - '0'; 
+        i++;
+    }
+    return sum * neg;
 }
 
 int main(void)
 {
-    char str[50];
-
-    ft_memset(str, 'x', 5);
-    printf("%s", str);
+    printf("%d", atoi("     -0203wd330 as"));
     return 0;
 }

@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 13:09:18 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:51 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/26 13:09:13 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/26 15:25:41 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void * ft_memcpy (void *restrict dst, const void *restrict src, size_t n)
 {
-    char *ptr = b;
+    char* ptr = dst;
+    char* ptr2 = src;
     size_t i;
 
-    i = 0;
-    while(i < len)
+    while(i < n)
     {
-        ptr[i] = c;
+        ptr[i] = ptr2[i];
         i++;
     }
     return ptr;
-}
-
-int main(void)
-{
-    char str[50];
-
-    ft_memset(str, 'x', 5);
-    printf("%s", str);
-    return 0;
 }

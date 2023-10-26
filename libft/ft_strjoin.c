@@ -1,36 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 13:09:18 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:51 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/26 13:46:29 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/26 15:26:49 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+int ft_strlen(const char *s)
 {
-    char *ptr = b;
-    size_t i;
+    int i;
 
     i = 0;
-    while(i < len)
+    while(s[i] != '\0')
     {
-        ptr[i] = c;
         i++;
     }
-    return ptr;
+    return i;
 }
 
-int main(void)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-    char str[50];
+    char* ptr;
+    int i;
+    int j;
 
-    ft_memset(str, 'x', 5);
-    printf("%s", str);
-    return 0;
+    ptr = malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char));
+    i = 0;
+    j = 0;
+    while(s1[i] != '\0')
+    {
+        ptr[i] = s1[i];
+        i++;
+    }
+    while(s2[j] != '\0')
+    {
+        ptr[i + j] = s2[j];
+        j++;
+    }
+    ptr[i + j] = '\0';
+    return ptr;
 }

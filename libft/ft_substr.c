@@ -1,36 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 13:09:18 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:51 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/26 13:10:12 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/26 13:46:00 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-void *ft_memset(void *b, int c, size_t len)
+int ft_strlen(const char *s)
 {
-    char *ptr = b;
-    size_t i;
+    int i;
 
     i = 0;
-    while(i < len)
+    while(s[i] != '\0')
     {
-        ptr[i] = c;
         i++;
     }
+    return i;
+}
+
+char *ft_substr(char const *s, unsigned int start, size_t len)
+{
+    size_t i;
+    char* ptr;
+
+    ptr = (char *)malloc((len + 1) * sizeof(char));
+    i = 0;
+    if(ptr == NULL)
+        return NULL;
+    while(s[start + i] != '\0' && i < len)
+    {
+        ptr[i] = s[i + start];
+        i++;
+    }
+    ptr[len] = '\0';
     return ptr;
 }
 
 int main(void)
 {
-    char str[50];
-
-    ft_memset(str, 'x', 5);
-    printf("%s", str);
-    return 0;
+    char str[] = "Hello Bro";
+    printf("%s", ft_substr(str, 2, 9));
 }

@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 13:09:18 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:51 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/26 13:09:20 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/26 15:25:52 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+char    *ft_strchr(const char *s, int c)
 {
-    char *ptr = b;
-    size_t i;
+    int i;
 
     i = 0;
-    while(i < len)
+    while(s[i] != '\0')
     {
-        ptr[i] = c;
+        if(s[i] == c)
+        {
+            return (char *)&s[i];
+        }
         i++;
     }
-    return ptr;
+    return NULL;
 }
 
-int main(void)
-{
-    char str[50];
+int main() {
+    const char *text = "Hello, World!";
+    char target = 'o';
 
-    ft_memset(str, 'x', 5);
-    printf("%s", str);
+    char *result = ft_strchr(text, target);
+
+    if (result != NULL) {
+        printf("Found '%c' at position: %ld\n", target, result - text + 1);
+    } else {
+        printf("'%c' not found in the string.\n", target);
+    }
+
     return 0;
 }

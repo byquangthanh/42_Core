@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 13:09:18 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:51 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/26 13:08:48 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/26 15:25:42 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_calloc(size_t count, size_t size)
 {
-    char *ptr = b;
-    size_t i;
+    void *ptr = malloc(count * size);
 
-    i = 0;
-    while(i < len)
+    if (ptr != NULL)
     {
-        ptr[i] = c;
-        i++;
+        ft_memset(ptr, 0, count * size);
     }
     return ptr;
-}
-
-int main(void)
-{
-    char str[50];
-
-    ft_memset(str, 'x', 5);
-    printf("%s", str);
-    return 0;
 }
