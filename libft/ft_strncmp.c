@@ -6,13 +6,13 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:10:05 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/29 16:02:00 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:16:51 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int ft_strncmp(const char *s1, char *s2, size_t n)
 {
     int i;
 

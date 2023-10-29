@@ -6,12 +6,11 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:10:12 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/27 11:43:50 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:16:51 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int ft_strlen(const char *s)
 {
@@ -22,7 +21,7 @@ int ft_strlen(const char *s)
     {
         i++;
     }
-    return i;
+    return (i);
 }
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
@@ -40,11 +39,11 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
         i++;
     }
     ptr[len] = '\0';
-    return ptr;
+    return (ptr);
 }
 
-int main(void)
-{
-    char str[] = "Hello Bro";
-    printf("%s", ft_substr(str, 2, 9));
-}
+// int main(void)
+// {
+//     char str[] = "Hello Bro";
+//     printf("%s", ft_substr(str, 2, 9));
+// }

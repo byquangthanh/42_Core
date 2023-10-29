@@ -6,12 +6,11 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:04:58 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 18:38:47 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:16:51 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int ft_strlen(const char *s)
 {
@@ -22,7 +21,7 @@ int ft_strlen(const char *s)
     {
         i++;
     }
-    return i;
+    return (i);
 }
 
 char    *ft_strchr(const char *s, int c)
@@ -38,7 +37,7 @@ char    *ft_strchr(const char *s, int c)
         }
         i++;
     }
-    return NULL;
+    return (NULL);
 }
 
 char *ft_strtrim(char const *s1, char const *set) {
@@ -61,12 +60,12 @@ char *ft_strtrim(char const *s1, char const *set) {
         i++;
     }
     ptr[i] = '\0';
-    return ptr;
+    return (ptr);
 }
 
-int main(void)
-{
-    char str[] = "  ahoj  ";
-    printf("%s", ft_strtrim(str, " "));
-    return 0;
-}
+// int main(void)
+// {
+//     char str[] = "  ahoj  ";
+//     printf("%s", ft_strtrim(str, " "));
+//     return 0;
+// }

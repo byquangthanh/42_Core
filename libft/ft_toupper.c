@@ -6,11 +6,11 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:10:16 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:59 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:16:51 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_toupper(int c)
 {
@@ -18,7 +18,7 @@ int ft_toupper(int c)
     {
         c -= 32;
     }
-    return c;
+    return (c);
 }
 
 // int main(void)
