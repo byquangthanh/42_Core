@@ -6,12 +6,11 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:09:40 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:53 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:01:56 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_strdup(const char *s1)
 {
@@ -29,5 +28,5 @@ char *ft_strdup(const char *s1)
         i++;
     }
     ptr[i] = '\0';
-    return ptr;
+    return (ptr);
 }

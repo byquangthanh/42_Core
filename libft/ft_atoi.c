@@ -6,11 +6,11 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:08:54 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:49 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:02:53 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int atoi(const char *str)
 {
@@ -37,11 +37,11 @@ int atoi(const char *str)
         sum += str[i] - '0'; 
         i++;
     }
-    return sum * neg;
+    return (sum * neg);
 }
 
-int main(void)
-{
-    printf("%d", atoi("     -0203wd330 as"));
-    return 0;
-}
+// int main(void)
+// {
+//     printf("%d", atoi("     -0203wd330 as"));
+//     return 0;
+// }

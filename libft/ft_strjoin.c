@@ -6,23 +6,11 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:46:29 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:26:49 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:01:57 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_strlen(const char *s)
-{
-    int i;
-
-    i = 0;
-    while(s[i] != '\0')
-    {
-        i++;
-    }
-    return i;
-}
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -44,5 +32,5 @@ char *ft_strjoin(char const *s1, char const *s2)
         j++;
     }
     ptr[i + j] = '\0';
-    return ptr;
+    return (ptr);
 }

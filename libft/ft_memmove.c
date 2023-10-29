@@ -6,12 +6,13 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:09:16 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:49 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:02:45 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -35,14 +36,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 }
 
 
-int main() {
-    char source[] = "Hello, World!";
-    char destination[20];
+// int main() {
+//     char source[] = "Hello, World!";
+//     char destination[20];
 
-    // Using ft_memmove to move the characters from index 7 to the end of the string to index 0 onwards
-    ft_memmove(destination, source + 7, strlen(source + 7) + 1);
+//     // Using ft_memmove to move the characters from index 7 to the end of the string to index 0 onwards
+//     ft_memmove(destination, source + 7, strlen(source + 7) + 1);
 
-    printf("Modified string: %s\n", destination); // Output: "Modified string: World!"
+//     printf("Modified string: %s\n", destination); // Output: "Modified string: World!"
 
-    return 0;
-}
+//     return 0;
+// }

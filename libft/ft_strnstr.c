@@ -6,11 +6,11 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:10:07 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:27 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:02:00 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -37,24 +37,24 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
         i++;
     }
 
-    return NULL;
+    return (NULL);
 }
 
-int main()
-{
-    const char *haystack = "Hello, World!";
-    const char *needle = " ";
-    size_t len = 4; // Length of the haystack string
+// int main()
+// {
+//     const char *haystack = "Hello, World!";
+//     const char *needle = " ";
+//     size_t len = 4; // Length of the haystack string
 
-    char *result = ft_strnstr(haystack, needle, len);
-    if (result != NULL)
-    {
-        printf("Needle found at index: %ld\n", result - haystack);
-    }
-    else
-    {
-        printf("Needle not found in the haystack.\n");
-    }
+//     char *result = ft_strnstr(haystack, needle, len);
+//     if (result != NULL)
+//     {
+//         printf("Needle found at index: %ld\n", result - haystack);
+//     }
+//     else
+//     {
+//         printf("Needle not found in the haystack.\n");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }

@@ -6,11 +6,12 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:09:42 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/26 15:25:55 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/29 16:01:57 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
@@ -30,16 +31,16 @@ size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsiz
         j++;
     }
     dst[i] = '\0';
-    return i;
+    return (i);
 }
 
-int main(void)
-{
-    char str[] = "hello";
-    char str1[] = " world";
-    int size = ft_strlcat(str, str1, 3);
+// int main(void)
+// {
+//     char str[] = "hello";
+//     char str1[] = " world";
+//     int size = ft_strlcat(str, str1, 3);
 
-    printf("Concetated String: %s\n", str);
-    printf("Length of Copied String: %d\n", size);
-    return 0;
-}
+//     printf("Concetated String: %s\n", str);
+//     printf("Length of Copied String: %d\n", size);
+//     return 0;
+// }
