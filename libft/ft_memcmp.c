@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/29 16:58:05 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/29 17:16:03 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/30 15:37:07 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/30 15:55:54 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*ptr;
-	int		i;
+	size_t	i;
+	const char* ptr;
+	const char* ptr2;
 
-	ptr = malloc((ft_strlen(s) + 1) * sizeof(char));
+
+	ptr = s1;
+	ptr2 = s2;
 	i = 0;
-	if(!ptr)
-		return NULL;
-	while(s[i] != '\0')
+	while(ptr[i] != '\0' && ptr2[i] != '\0')
 	{
-		ptr = (*f)(i, s[i]);
+		if(ptr[i] != ptr2[i])
+		{
+			return(ptr[i] - ptr2[i]);
+		}
 		i++;
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	return(ptr[i] - ptr2[i]);
 }

@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/29 16:58:05 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/29 17:16:03 by sixshooterx      ###   ########.fr       */
+/*   Created: 2023/10/30 12:52:38 by sixshooterx       #+#    #+#             */
+/*   Updated: 2023/10/30 13:05:55 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*ptr;
-	int		i;
+	size_t	i;
+	const char *ptr;
 
-	ptr = malloc((ft_strlen(s) + 1) * sizeof(char));
+	ptr = s;
 	i = 0;
-	if(!ptr)
-		return NULL;
-	while(s[i] != '\0')
+	while(i < n)
 	{
-		ptr = (*f)(i, s[i]);
+		if(ptr[i] == (unsigned char)c)
+		{
+			return (void *)(ptr + i);
+		}
 		i++;
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	return (NULL);
 }
+
+int main(void)
+{
+    char* str = "ahoj";
+    char* result = ft_memchr(str, 'j', 3);
+    if (result != NULL) {
+        printf("%c", *result);
+    } else {
+        printf("Character not found\n");
+    }
+    return 0;
+}
+
