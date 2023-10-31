@@ -6,7 +6,7 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:29:17 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/29 17:31:32 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/31 17:56:53 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void ft_putstr_fd(char *s, int fd)
 	}
 }
 
-int main(void)
-{
-	ft_putstr_fd("ahoj", 3);
-}
+// int main(void)
+// {
+// 	ft_putstr_fd("ahoj", 3);
+// }

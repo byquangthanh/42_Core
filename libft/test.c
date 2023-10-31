@@ -1,35 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
+#include "libft.h"
 
-int	ft_atoi(const char *str)
+int main(void)
 {
-	int	i;
-	int	neg;
-	int	res;
+	int arr1[] = {5, 2}; //0 0 0 3 0 0 0 2
+	int arr2[] = {1, 2};
 
-	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if(memchr(arr1, 5, 2 * sizeof(int)) != NULL)
 	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
+		printf("found byte");
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	else
 	{
-		res = (str[i] - '0') + (res * 10);
-		i++;
+		printf("nothing");
 	}
-	return (res * neg);
-}
-int main() {
-    const char *str = "  -2021 2345";
-    int num = ft_atoi(str);
-
-    printf("Converted string to integer: %d\n", num);
-
-    return 0;
 }
