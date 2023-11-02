@@ -6,7 +6,7 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:08:54 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/11/02 12:34:46 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/11/02 20:13:14 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] <= '9' && str[i] >= '0' && str[i] != '\0')
 	{
-		sum = sum * 10 + (str[i] - 48);
+		sum = sum * 10 + (str[i] - '0');
 		i++;
 	}
 	return (sum * neg);
