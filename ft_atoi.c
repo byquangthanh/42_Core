@@ -3,38 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quanguye <quanguye@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:08:54 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/30 16:04:29 by quanguye         ###   ########.fr       */
+/*   Updated: 2023/11/02 12:34:46 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sum;
-	int	neg;
+	int			i;
+	long int	sum;
+	int			neg;
 
 	neg = 1;
 	sum = 0;
 	i = 0;
-	while (str[i] == ' ')
-	{
+	while (str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
+			|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
 		i++;
-	}
+	if (str[i] == '-')
+		neg *= -1;
 	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			neg *= -1;
 		i++;
-	}
-	while (str[i] <= '9' && str[i] >= '0')
+	while (str[i] <= '9' && str[i] >= '0' && str[i] != '\0')
 	{
-		sum *= 10;
-		sum += str[i] - '0';
+		sum = sum * 10 + (str[i] - 48);
 		i++;
 	}
 	return (sum * neg);
@@ -42,6 +38,6 @@ int	atoi(const char *str)
 
 // int main(void)
 // {
-//     printf("%d", atoi("     -0203wd330 as"));
+//     printf("%d", atoi("d+2212202"));
 //     return 0;
 // }

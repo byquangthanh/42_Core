@@ -6,13 +6,13 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:27:49 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/29 17:28:28 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/10/31 22:43:10 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

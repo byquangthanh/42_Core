@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quanguye <quanguye@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:09:05 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/30 17:39:07 by quanguye         ###   ########.fr       */
+/*   Updated: 2023/11/01 10:08:42 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-int main(void)
-{
-    printf("%d\n", ft_isalpha('a'));
-    printf("%d\n", ft_isalpha(60));
-    return 0;
-}
+// int main(void)
+// {
+//     printf("%d\n", ft_isalpha('a'));
+//     printf("%d\n", ft_isalpha(60));
+//     return 0;
+// }

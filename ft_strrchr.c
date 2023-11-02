@@ -6,31 +6,33 @@
 /*   By: sixshooterx <sixshooterx@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:10:11 by sixshooterx       #+#    #+#             */
-/*   Updated: 2023/10/29 16:02:01 by sixshooterx      ###   ########.fr       */
+/*   Updated: 2023/11/01 11:25:11 by sixshooterx      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c) {
-    int i = 0;
-    
-    //find the end of the string
-    while (s[i] != '\0') {
-        i++;
-    }
+char	*ft_strrchr(const char *s, int c)
+{
+	int				i;
+	unsigned char	target;
 
-    while (i >= 0) {
-        if (s[i] == c) {
-            return (char *)&s[i];
-        }
-        i--;
-    }
-
-    return (NULL);
+	i = 0;
+	target = (unsigned char) c;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	while (i >= 0)
+	{
+		if (s[i] == target)
+		{
+			return ((char *)&s[i]);
+		}
+		i--;
+	}
+	return (NULL);
 }
-
-
 // int main() {
 //     const char *text = "Hello, World!";
 //     char target = 'o';
