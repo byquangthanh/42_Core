@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"stdarg.h": "c",
+		"stdlib.h": "c",
+		"stdint.h": "c",
+		"ft_printf.h": "c",
+		"ratio": "c"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
+}
